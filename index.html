@@ -24,10 +24,33 @@
 
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
     </head>
+    <style>
+        .blog-img img {
+    border-radius: 8px;
+}
+.blog-heading {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+.blog-conten {
+    text-align: center;
+}
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    </style>
 
     <body>
 
@@ -53,7 +76,7 @@
                 <div class="w-100 h-100">
                     <div class="topbar px-0 py-2 d-none d-lg-block" style="height: 45px;">
                         <div class="row gx-0 align-items-center">
-                            <div class="col-lg-8 text-center text-lg-center mb-lg-0">
+                            <div class="col-lg-12 text-center text-lg-center mb-lg-0">
                                 <div class="d-flex flex-wrap">
                                     <div class="border-end border-primary pe-3">
                                         <a href="#" class="text-muted small"><i class="fa fa-phone-alt text-primary me-2"></i>0810 814 7879 / 0703 799 0332 / +1 (770) 899 1360</a>
@@ -230,63 +253,113 @@
 
 
         <!-- Services Start -->
-         <div class="container-fluid blog py-5" id="service">
+        <div class="container-fluid blog py-5" id="service">
             <div class="container py-5">
                 <div class="d-flex flex-column mx-auto text-center mb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary">Our Services</h4>
                     <h1 class="display-4 mb-4">Product & Services</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, deserunt provident ab voluptates rerum eaque eum magni autem atque in minus laboriosam corrupti deleniti voluptatibus rem reiciendis modi veniam animi?
-                    </p>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, deserunt provident ab voluptates rerum eaque eum magni autem atque in minus laboriosam corrupti deleniti voluptatibus rem reiciendis modi veniam animi?</p>
                 </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog">
-                            <div class="blog-img">
-                                <img src="img/commercial-1.jpg" class="img-fluid w-100" alt="">
-                            </div>
-                            <div class="blog-heading ms-4">
-                                <a href="#" class="h6 mb-0 p-4">High-Performance MPLS Transmission Services</a>
-                            </div>
-                            <div class="blog-conten bg-light p-4">
-                                <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis rem distinctio tempora eum quam eligendi. Repudiandae voluptas voluptatibus quo itaque!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog">
-                            <div class="blog-img">
-                                <img src="img/commercial-1.jpg" class="img-fluid w-100" alt="">
-                            </div>
-                            <div class="blog-heading ms-4">
-                                <a href="#" class="h6 mb-0 p-4">Seamless Metro VPN Connectivity Services</a>
-                            </div>
-                            <div class="blog-conten bg-light p-4">
-                                <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis rem distinctio tempora eum quam eligendi. Repudiandae voluptas voluptatibus quo itaque!
-                                </p>
+                <!-- Swiper Slider -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Service Item -->
+                        <div class="swiper-slide">
+                            <div class="blog">
+                                <div class="blog-img">
+                                    <img src="img/commercial-1.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="blog-heading ms-4">
+                                    <a href="#" class="h6 mb-0 p-4">High-Performance MPLS Transmission Services</a>
+                                </div>
+                                <div class="blog-conten bg-light p-4">
+                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis rem distinctio tempora eum quam eligendi. Repudiandae voluptas voluptatibus quo itaque!</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog">
-                            <div class="blog-img">
-                                <img src="img/commercial-1.jpg" class="img-fluid w-100" alt="">
-                            </div>
-                            <div class="blog-heading ms-4">
-                                <a href="#" class="h6 mb-0 p-4">
-                                    High-Speed FTTX Wholesale Services</a>
-                            </div>
-                            <div class="blog-conten bg-light p-4">
-                                <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis rem distinctio tempora eum quam eligendi. Repudiandae voluptas voluptatibus quo itaque!
-                                </p>
+                        <!-- Repeated for each service -->
+                        <div class="swiper-slide">
+                            <div class="blog">
+                                <div class="blog-img">
+                                    <img src="img/commercial-1.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="blog-heading ms-4">
+                                    <a href="#" class="h6 mb-0 p-4">Seamless Metro VPN Connectivity Services</a>
+                                </div>
+                                <div class="blog-conten bg-light p-4">
+                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis rem distinctio tempora eum quam eligendi. Repudiandae voluptas voluptatibus quo itaque!</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    
+                        <div class="swiper-slide">
+                            <div class="blog">
+                                <div class="blog-img">
+                                    <img src="img/commercial-1.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="blog-heading ms-4">
+                                    <a href="#" class="h6 mb-0 p-4">Seamless Metro VPN Connectivity Services</a>
+                                </div>
+                                <div class="blog-conten bg-light p-4">
+                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis rem distinctio tempora eum quam eligendi. Repudiandae voluptas voluptatibus quo itaque!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="blog">
+                                <div class="blog-img">
+                                    <img src="img/commercial-1.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="blog-heading ms-4">
+                                    <a href="#" class="h6 mb-0 p-4">Seamless Metro VPN Connectivity Services</a>
+                                </div>
+                                <div class="blog-conten bg-light p-4">
+                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis rem distinctio tempora eum quam eligendi. Repudiandae voluptas voluptatibus quo itaque!</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide">
+                            <div class="blog">
+                                <div class="blog-img">
+                                    <img src="img/commercial-1.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="blog-heading ms-4">
+                                    <a href="#" class="h6 mb-0 p-4">Seamless Metro VPN Connectivity Services</a>
+                                </div>
+                                <div class="blog-conten bg-light p-4">
+                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis rem distinctio tempora eum quam eligendi. Repudiandae voluptas voluptatibus quo itaque!</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide">
+                            <div class="blog">
+                                <div class="blog-img">
+                                    <img src="img/commercial-1.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="blog-heading ms-4">
+                                    <a href="#" class="h6 mb-0 p-4">Seamless Metro VPN Connectivity Services</a>
+                                </div>
+                                <div class="blog-conten bg-light p-4">
+                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis rem distinctio tempora eum quam eligendi. Repudiandae voluptas voluptatibus quo itaque!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more services here -->
+                    </div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Navigation Buttons -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
-         </div>
+        </div>
+        
         <!-- Blog End -->
 
         <!-- Testimonial Start -->
@@ -559,7 +632,30 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
-        
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.mySwiper', {
+        loop: true,
+        slidesPerView: 3, // Adjust based on the number of visible slides
+        spaceBetween: 30, // Space between slides
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            // Responsive breakpoints for different device sizes
+            320: { slidesPerView: 1, spaceBetween: 10 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 30 },
+        },
+    });
+});
+
+        </script>
         <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
