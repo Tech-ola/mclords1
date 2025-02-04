@@ -224,7 +224,7 @@
     .header-top .navbar-brand {
         position: relative;
         overflow: hidden;
-        padding: 40px 50px 40px 0;
+        padding: 20px 50px 40px 0;
         z-index: 99;
     }
     
