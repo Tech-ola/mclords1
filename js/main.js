@@ -103,18 +103,18 @@
 
 
    // Back to top button
-   $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-        $('.back-to-top').fadeIn('fast'); // Make it appear immediately
-    } else {
-        $('.back-to-top').fadeOut('fast'); // Make it disappear immediately
-    }
-    });
+//    $(window).scroll(function () {
+//     if ($(this).scrollTop() > 300) {
+//         $('.back-to-top').fadeIn('fast'); // Make it appear immediately
+//     } else {
+//         $('.back-to-top').fadeOut('fast'); // Make it disappear immediately
+//     }
+//     });
 
-    $('.back-to-top').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 1000, 'easeInOutExpo'); // Instant scroll with smooth effect
-        return false;
-    });
+//     $('.back-to-top').click(function () {
+//         $('html, body').animate({ scrollTop: 0 }, 1000, 'easeInOutExpo'); // Instant scroll with smooth effect
+//         return false;
+//     });
 
 
 })(jQuery);
