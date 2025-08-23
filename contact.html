@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>ThoughtWire Global System LTD</title>
+        <title>Contact Us - ThoughtWire Global System LTD</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -21,75 +21,163 @@
         <link rel="stylesheet" href="lib/animate/animate.min.css"/>
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
-    </head>
-    <style>
-
-        .banner {
-            width: 100%;
-            height: 250px;
-            background: url('./img/contact.jpg') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2em;
-            font-weight: bold;
-            /* margin-top: -1%; */
-        }
-        .contact-container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        .contact-details {
-            margin-bottom: 20px;
-        }
-        .contact-details p {
-            margin: 5px 0;
-        }
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-        }
-        .contact-form input, .contact-form textarea {
-            margin-bottom: 10px;
-            padding: 10px;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            background-color: #516790;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .map {
-            margin: 20px auto;
-            max-width: 80%;
-            text-align: center;
-        }
-
-        @media (max-width: 900px) {
+        
+        <style>
+            .navbar {
+                background: #fff;
+                padding: 10px 20px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            .navbar-brand img {
+                height: 60px;
+                object-fit: contain;
+            }
+    
+            .navbar-nav .nav-link {
+                font-size: 16px;
+                font-weight: 600;
+                margin-left: 15px;
+                color: #042f5a !important;
+            }
+            .banner {
+                width: 100%;
+                height: 250px;
+                background: url('./img/contact.jpg') no-repeat center center/cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 2.5rem;
+                font-weight: bold;
+                margin-bottom: 40px;
+            }
+            
             .contact-container {
-            max-width: 800px;
-            margin-top: -90%;
-            padding: 20px;
-        }
-        }
-
-    </style>
+                max-width: 1200px;
+                margin: 40px auto;
+                padding: 20px;
+            }
+            
+            .contact-info-card {
+                background: #f8f9fa;
+                border-radius: 10px;
+                padding: 30px;
+                height: 100%;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            }
+            
+            .contact-info-item {
+                margin-bottom: 25px;
+                display: flex;
+                align-items: flex-start;
+            }
+            
+            .contact-icon {
+                font-size: 24px;
+                color: #042f5a;
+                margin-right: 15px;
+                min-width: 30px;
+                text-align: center;
+            }
+            
+            .contact-details h3 {
+                color: #042f5a;
+                margin-bottom: 20px;
+                font-weight: 700;
+            }
+            
+            .contact-details h4 {
+                color: #042f5a;
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+            
+            .contact-form-card {
+                background: white;
+                border-radius: 10px;
+                padding: 30px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            }
+            
+            .form-control {
+                padding: 12px 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                font-size: 16px;
+            }
+            
+            .form-control:focus {
+                border-color: #042f5a;
+                box-shadow: 0 0 0 0.2rem rgba(4, 47, 90, 0.25);
+            }
+            
+            .btn-primary {
+                background-color: #042f5a;
+                border-color: #042f5a;
+                padding: 12px 30px;
+                font-weight: 600;
+            }
+            
+            .btn-primary:hover {
+                background-color: #031d38;
+                border-color: #031d38;
+            }
+            
+            .social-links {
+                display: flex;
+                gap: 15px;
+                margin-top: 20px;
+            }
+            
+            .social-links a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                background: #042f5a;
+                color: white;
+                border-radius: 50%;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+            
+            .social-links a:hover {
+                background: #031d38;
+                transform: translateY(-3px);
+            }
+            
+            .map-container {
+                margin: 40px auto;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            
+            @media (max-width: 768px) {
+                .banner {
+                    height: 200px;
+                    font-size: 2rem;
+                }
+                
+                .contact-container {
+                    margin-top: 20px;
+                    padding: 15px;
+                }
+                
+                .contact-info-card, .contact-form-card {
+                    padding: 20px;
+                }
+            }
+        </style>
+    </head>
 
     <body>
 
@@ -101,130 +189,159 @@
         </div>
         <!-- Spinner End -->
 
-        
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid header-top">
-            <div class="container d-flex align-items-center">
-                <div class="d-flex align-items-center h-100">
-                    <a href="https://tech-ola.github.io/mclords1//" class="navbar-brand">
-                        <!-- <h1 class="text-primary mb-0"><i class="fas fa-cogs"></i> ThoughtWire Global System LTD</h1> -->
-                        <!-- <img src="img/logo.png" alt="Logo" class="img-fluid" > -->
-                        <img src="img/logo.jpg" alt="Logo" class="img-fluid" >
-                    </a>
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+        
+        <a class="" href="index.html">
+            <img src="img/logo.png" alt="Logo" class="img-fluid" >
+        </a>
+        
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span>
+        </button>
+    
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="/#service" class="nav-item nav-link">Service</a>
+            <a href="#partners" class="nav-item nav-link">Partners</a>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+        <!-- Banner Section -->
+        <div class="banner">
+            <h1 style="color: white;">Contact Us</h1>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="container contact-container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-lg-5 mb-5">
+                    <div class="contact-info-card">
+                        <h3>Get In Touch</h3>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Office Address</h4>
+                                <p>11 Adu Street, Ogba, Ikeja, Lagos, Nigeria</p>
+                                <p class="mt-2">3030 Rusticwood Drive, Snellville, GA 30078, USA</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone Numbers</h4>
+                                <p><a href="tel:+2348108147879">+234 810 814 7879</a></p>
+                                <p><a href="tel:+2347037990332">+234 703 799 0332</a></p>
+                                <p><a href="tel:+2348165994317">+234 816 599 4317</a></p>
+                                <p><a href="tel:+2348188903416">+234 818 890 3416</a></p>
+                                <p><a href="tel:+17708991360">+1 (770) 899 1360</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email Addresses</h4>
+                                <p><a href="mailto:infor@thoughtwire.net">infor@thoughtwire.net</a></p>
+                                <p><a href="mailto:support@thoughtwire.net">support@thoughtwire.net</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Follow Us</h4>
+                                <div class="social-links">
+                                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="w-100 h-100">
-                    <div class="topbar px-0 py-2 d-none d-lg-block" style="height: 45px;">
-                        <div class="row gx-0 align-items-center">
-                            <div class="col-lg-12 text-center text-lg-center mb-lg-0">
-                                <div class="d-flex flex-wrap">
-                                    <div class="border-end border-primary pe-3">
-                                        <a href="#" class="text-muted small"><i class="fa fa-phone-alt text-primary me-2"></i>0816 599 4317 / 0818 890 3416</a>
+                
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <div class="contact-form-card">
+                        <h3>Send Us a Message</h3>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
                                     </div>
-                                    <div class="ps-3">
-                                        <a href="mailto:infor@thoughtwire.net" class="text-muted small"><i class="fas fa-envelope text-primary me-2"></i>infor@thoughtwire.net</a>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                                     </div>
                                 </div>
                             </div>
                             
-                        </div>
-                    </div>
-                    <div class="nav-bar px-0 py-lg-0" style="height: 80px;">
-                        <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-lg-end">
-                            <a href="https://tech-ola.github.io/mclords1/" class="navbar-brand-2" style="width: 250px;">
-                                <!-- <h1 class="text-primary mb-0"> ThoughtWire Global System LTD</h1> -->
-                                <img src="img/logo.png" alt="Logo" class="img-fluid" width="150px">
-                                <!-- <img src="img/logo.png" alt="Logo"> -->
-                            </a>  
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                                <span class="fa fa-bars"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarCollapse">
-                                <div class="navbar-nav mx-0 mx-lg-auto bg-white">
-                                    <a href="https://tech-ola.github.io/mclords1/" class="nav-item nav-link active" style="font-size: larger;">Home</a>
-                                    <a href="/#about" class="nav-item nav-link" style="font-size: larger;">About</a>
-                                    <a href="/#service" class="nav-item nav-link" style="font-size: larger;">Service</a>
-
-                                    <a href="/#partners" class="nav-item nav-link" style="font-size: larger;">Partners</a>
-
-                                    <!-- <a href="/#testimonial" class="nav-item nav-link" style="font-size: larger;">Testimonial</a> -->
-                                    
-                                    <a href="contact.html" class="nav-item nav-link" style="font-size: larger;">Contact</a>
-                                    <!-- <div class="nav-btn ps-3">
-                                        <button class="btn-search btn btn-primary btn-md-square mt-2 mt-lg-0 mb-4 mb-lg-0 flex-shrink-0" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
-                                        <a href="#" class="btn btn-primary py-2 px-4 ms-0 ms-lg-3"> Get Solution</a>
-                                    </div> -->
-                                </div>
+                            <div class="form-group">
+                                <select class="form-control" name="service" required>
+                                    <option value="" disabled selected>Select Service Interested In</option>
+                                    <option value="civil-engineering">Civil Engineering</option>
+                                    <option value="building-design">Building Design and Construction</option>
+                                    <option value="road-construction">Road Construction</option>
+                                    <option value="electrical-engineering">Electrical Engineering</option>
+                                    <option value="electrical-design">Electrical Building Design</option>
+                                    <option value="substation">Substation Construction</option>
+                                    <option value="solar-power">Solar Power Solutions</option>
+                                    <option value="it-services">Information Technology</option>
+                                    <option value="software-dev">Software Development</option>
+                                    <option value="campus-wifi">Campus WiFi Setup</option>
+                                    <option value="data-center">Data Centre Setup & Maintenance</option>
+                                    <option value="hardware">Hardware Supply & Installation</option>
+                                    <option value="lan-infrastructure">LAN Infrastructure</option>
+                                </select>
                             </div>
-                        </nav>
+                            
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Navbar & Hero End -->
 
-        <!-- Modal Search Start -->
-        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center bg-primary">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="btn bg-light border nput-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
+        <!-- Map Section -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="map-container">
+                        <h3 class="text-center mb-4">Our Location</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.061227590447!2d3.347908274993968!3d6.639319093355197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93efa0db81c9%3A0xb537f5bca11e0c35!2s11%20Adu%20St%2C%20Ogba%2C%20Lagos%20101233%2C%20Lagos!5e0!3m2!1sen!2sng!4v1754073570774!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Modal Search End -->
-
-
-               <!-- Carousel Start -->
-               <div class="header-carousel owl-carousel overflow-hidden">
-                <!-- <div class="header-carousel-item hero-section"> -->
-                    <div class="banner">Contact Us</div>
-                    <!-- </div> -->
-                </div>
-                
-            </div>
-            <!-- Carousel End -->
-
-            <div class="contact-container">
-                <div class="contact-details">
-                    <h2>Get in Touch</h2>
-                    <p>
-                        <!-- <strong>Address:</strong> <br> <strong>USA:</strong> 3030 Rusticwood Drive, Snellville, GA 30078 <br> -->
-                        <strong>ADDRESS:</strong> 
-                        11 Adu Street, Ogba, Ikeja, Lagos.
-                        <!-- <strong>KWARA STATE:</strong> Jam Fortune House, 10 Police Road, Adjacent Radio Kwara, GRA, Ilorin</p>  -->
-                        <br>
-                    <p class="mt-2"><strong>PHONE:</strong> 
-                        <a href="#" style="margin: 0px;">0810 814 7879 | 0703 799 0332 | +1 (770) 899 1360</a>
-                    </p>
-                    
-                    <p><strong>EMAIL:</strong> <a href="mailto:infor@thoughtwire.net">infor@thoughtwire.net</a></p>
-                </div>
-                
-                <div class="contact-form mt-3">
-                    <h2>Send Us a Message</h2>
-                    <form>
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                        <button type="submit" style="background-color: #042f5a;">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        
-            <div class="map">
-                <h2>Find Us Here</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.061227590447!2d3.347908274993968!3d6.639319093355197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93efa0db81c9%3A0xb537f5bca11e0c35!2s11%20Adu%20St%2C%20Ogba%2C%20Lagos%20101233%2C%20Lagos!5e0!3m2!1sen!2sng!4v1754073570774!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
 
         <!-- Footer Start -->
         <div class="container-fluid footer bg-dark py-5 wow fadeIn" data-wow-delay="0.2s">
@@ -233,45 +350,28 @@
                     <div class="col-md-8 col-lg-8 col-xl-6">
                         <div class="footer-item d-flex flex-column">
                             <div class="footer-item">
-                                <!-- <h3 class="text-white mb-4"><i class="fas fa-cogs text-primary me-3"></i>ThoughtWire Global System LTD</h3> -->
                                 <img src="img/logo.jpg" alt="Logo" class="img-fluid mb-3" width="200px">
                                 <p class="mb-3">Thoughtwire Global Systems is poised to collaborate with your institution to provide broadband internet service and make it available at every point, every space on campus 24 hours, 7 days. The service offers unlimited download at fast speed with 99.99% uptime.</p>
-                               
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">Quick Links</h4>
-                            <a href="https://tech-ola.github.io/mclords1/"> Home</a>
-                            <a href="/#about"> About us</a>
-                            <a href="/#service"> Service</a>
-                            <a href="/#partners"> Partners</a>
-                            <a href="#contact"> Contact Us</a>
-                            
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About us</a>
+                            <a href="index.html#service">Service</a>
+                            <a href="index.html#partners">Partners</a>
+                            <a href="contact.html">Contact Us</a>
                         </div>
                     </div>
-                    <!-- <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Electricity service</h4>
-                            <a href="#"> Air Conditioning</a>
-                            <a href="#"> Electrical Panels</a>
-                            <a href="#"> Security System</a>
-                            <a href="#"> Indoor Lighting</a>
-                            <a href="#"> Electrical Services</a>
-                        </div>
-                    </div> -->
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">Contact Info</h4>
                             <a href="mailto:infor@thoughtwire.net"><i class="fas fa-envelope text-primary"></i> infor@thoughtwire.net</a>
-
-                            <a href="tel:+2348165994317"><i class="fas fa-phone text-primary me-2"></i> 0816 599 4317</a>
-                            <a href="tel:+2348188903416" class="mb-3"><i class="fas fa-print text-primary me-2"></i> 0818 890 3416</a>
-                            <!-- <a href="#"><i class="fa fa-map-marker-alt text-primary me-2"></i> USA: 3030 Rusticwood Drive, Snellville, GA 30078</a>
-                            <a href="#"><i class="fa fa-map-marker-alt text-primary me-2"></i> LAGOS STATE: 27, Acme Road, Agidingbi, Ikeja, Lagos</a>
-                            <a href="#"><i class="fa fa-map-marker-alt text-primary me-2"></i> KWARA STATE: Jam Fortune House, 10 Police Road, Adjacent Radio Kwara, GRA, Ilorin</a> -->
-                            
+                            <a href="tel:+2348108147879"><i class="fas fa-phone text-primary me-2"></i> +234 810 814 7879</a>
+                            <a href="tel:+2347037990332"><i class="fas fa-print text-primary me-2"></i> +234 703 799 0332</a>
+                            <a href="tel:+17708991360" class="mb-3"><i class="fas fa-phone text-primary me-2"></i> +1 (770) 899 1360</a>
                         </div>
                     </div>
                 </div>
@@ -279,7 +379,6 @@
         </div>
         <!-- Footer End -->
 
-        
         <!-- Copyright Start -->
         <div class="container-fluid copyright py-4">
             <div class="container">
@@ -295,7 +394,6 @@
         </div>
         <!-- Copyright End -->
 
-
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-lg-square back-to-top" style="background-color: #042f5a;"><i class="fa fa-arrow-up"></i></a>   
 
@@ -306,10 +404,20 @@
         <script src="lib/easing/easing.min.js"></script>
         <script src="lib/waypoints/waypoints.min.js"></script>
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        
+        <script>
+            // Simple form validation and submission handling
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would typically send the form data to your server
+                // For now, we'll just show an alert
+                alert('Thank you for your message! We will contact you soon.');
+                this.reset();
+            });
+        </script>
     </body>
-
 </html>
