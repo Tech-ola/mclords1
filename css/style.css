@@ -142,7 +142,6 @@
         margin-top: 20px;
         padding-bottom: 20px;
         margin-left: 50px;
-        background: var(--bs-light);
     }
 
     .navbar .navbar-nav .nav-btn {
@@ -191,7 +190,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: var(--bs-light);
         border-radius: 10px;
     }
 

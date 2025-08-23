@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Service Details - ThoughtWire Global System LTD</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Edu+TAS+Beginner:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="lib/animate/animate.min.css" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(4, 47, 90, 0.8), rgba(4, 47, 90, 0.8)), url('img/service-bg.jpg') center/cover no-repeat;
+            padding: 100px 0;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .service-detail-icon {
+            font-size: 60px;
+            color: #042f5a;
+            margin-bottom: 20px;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #042f5a;
+            position: absolute;
+            left: 0;
+        }
+        
+        .service-content img {
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .navbar {
+            background: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 16px;
+            font-weight: 600;
+            margin-left: 15px;
+            color: #042f5a !important;
+        }
+        
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="" href="index.html">
+                <img src="img/logo.png" alt="Logo" class="img-fluid">
+            </a>
+            
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+        
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="index.html#service" class="nav-item nav-link">Service</a>
+                    <a href="index.html#partners" class="nav-item nav-link">Partners</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold" id="service-title">Our Services</h1>
+            <p class="lead" id="service-subtitle">Comprehensive solutions for your needs</p>
+        </div>
+    </section>
+    
+    <!-- Breadcrumb -->
+    <div class="container py-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="index.html#service">Services</a></li>
+                <li class="breadcrumb-item active" id="breadcrumb-service">Service Details</li>
+            </ol>
+        </nav>
+    </div>
+    
+    <!-- Service Content Section -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="text-center mb-5">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-cogs" id="service-icon"></i>
+                    </div>
+                    <h2 id="service-heading">Service Title</h2>
+                    <p class="lead" id="service-description">Brief description of the service</p>
+                </div>
+                
+                <div class="service-content" id="service-details">
+                    <!-- Content will be dynamically loaded here -->
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="contact.html" class="btn btn-primary btn-lg me-3">Contact Us</a>
+                    <a href="index.html#service" class="btn btn-outline-primary btn-lg">View All Services</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-dark py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-8 col-lg-8 col-xl-6">
+                    <div class="footer-item d-flex flex-column">
+                        <div class="footer-item">
+                            <img src="img/logo.jpg" alt="Logo" class="img-fluid mb-3" width="200px">
+                            <p class="mb-3">ThoughtWire Global System LTD is poised to collaborate with your institution to provide broadband internet service and make it available at every point, every space on campus 24 hours, 7 days. The service offers unlimited download at fast speed with 99.99% uptime.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About us</a>
+                        <a href="index.html#service">Service</a>
+                        <a href="index.html#partners">Partners</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Contact Info</h4>
+                        <a href="mailto:infor@thoughtwire.net"><i class="fas fa-envelope text-primary"></i> infor@thoughtwire.net</a>
+                        <a href="tel:+2348165994317"><i class="fas fa-phone text-primary me-2"></i> 0816 599 4317</a>
+                        <a href="tel:+2348188903416" class="mb-3"><i class="fas fa-print text-primary me-2"></i> 0818 890 3416</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>ThoughtWire Global System LTD</a>, All right reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-body">
+                    <!-- Designed By <a class="border-bottom text-white" href="https://www.linkedin.com/in/olayinka-alabi-857007198/">techwithyinka</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top" style="background-color: #042f5a;"><i class="fa fa-arrow-up"></i></a>   
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Service content data
+        const services = {
+            'building-design': {
+                title: 'Building Design and Construction',
+                icon: 'hard-hat',
+                subtitle: 'Comprehensive architectural solutions',
+                description: 'Expert building design and construction services for residential, commercial, and industrial projects.',
+                content: `
+                    <div class="mb-5">
+                        <h3 class="mb-3">Overview</h3>
+                        <p>Our building design and construction services encompass the entire project lifecycle, from initial concept development to final construction. We combine innovative design with practical construction methodologies to create structures that are both aesthetically pleasing and functionally efficient.</p>
+                        <img src="img/building-design.jpg" class="img-fluid w-100" alt="Building Design">
+                    </div>
+                    
+                    <div class="mb-5">
+                        <h3 class="mb-3">Our Approach</h3>
+                        <p>We follow a meticulous process that includes:</p>
+                        <ul class="feature-list">
+                            <li>Needs assessment and feasibility studies</li>
+                            <li>Architectural design and planning</li>
+                            <li>Structural engineering and analysis</li>
+                            <li>Material selection and procurement</li>
+                            <li>Construction management and quality control</li>
+                            <li>Project handover and post-construction support</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-5">
+                        <h3 class="mb-3">Key Features</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>Innovative Design</h5>
+                                <p>Creative architectural solutions tailored to your specific requirements and site conditions.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Quality Construction</h5>
+                                <p>Adherence to international building codes and standards using high-quality materials.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Project Management</h5>
+                                <p>Comprehensive oversight to ensure projects are completed on time and within budget.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Sustainability</h5>
+                                <p>Environmentally conscious designs that optimize energy efficiency and reduce environmental impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'road-construction': {
+                title: 'Road Construction',
+                icon: 'road',
+                subtitle: 'Building pathways to connectivity',
+                description: 'Professional road construction services for urban and rural infrastructure development.',
+                content: `
+                    <div class="mb-5">
+                        <h3 class="mb-3">Overview</h3>
+                        <p>Our road construction services include the design, planning, and execution of road projects of all scales. We specialize in creating durable, safe, and efficient transportation networks that connect communities and facilitate economic growth.</p>
+                        <img src="img/road-construction.jpg" class="img-fluid w-100" alt="Road Construction">
+                    </div>
+                    
+                    <div class="mb-5">
+                        <h3 class="mb-3">Our Services Include</h3>
+                        <ul class="feature-list">
+                            <li>Feasibility studies and route planning</li>
+                            <li>Geotechnical investigations</li>
+                            <li>Road design and engineering</li>
+                            <li>Earthworks and grading</li>
+                            <li>Pavement construction</li>
+                            <li>Drainage systems installation</li>
+                            <li>Road signage and safety features</li>
+                            <li>Quality assurance and testing</li>
+                        </ul>
+                    </div>
+                `
+            },
+            // Add all other services following the same pattern
+            'electrical-design': {
+                title: 'Electrical Building Design',
+                icon: 'bolt',
+                subtitle: 'Powering modern structures',
+                description: 'Comprehensive electrical system design for residential, commercial and industrial buildings.',
+                content: `...` // Content for electrical design
+            },
+            'substation': {
+                title: 'Substation Construction',
+                icon: 'industry',
+                subtitle: 'High/Medium voltage solutions',
+                description: 'Design and construction of electrical substations for reliable power distribution.',
+                content: `...` // Content for substation
+            },
+            // Continue with all other services...
+            'solar-power': {
+                title: 'Solar Power Solutions',
+                icon: 'solar-panel',
+                subtitle: 'Harnessing renewable energy',
+                description: 'Design and installation of solar energy systems for various applications.',
+                content: `...` // Content for solar power
+            },
+            'software-dev': {
+                title: 'Software Development',
+                icon: 'code',
+                subtitle: 'Custom digital solutions',
+                description: 'Tailored software applications to meet your business needs.',
+                content: `...` // Content for software development
+            },
+            'campus-wifi': {
+                title: 'Campus WiFi Setup',
+                icon: 'wifi',
+                subtitle: 'Seamless connectivity solutions',
+                description: 'Comprehensive wireless network installation for educational institutions.',
+                content: `...` // Content for campus WiFi
+            },
+            'data-center': {
+                title: 'Data Centre Setup & Maintenance',
+                icon: 'server',
+                subtitle: 'Reliable data management',
+                description: 'End-to-end data center solutions including design and ongoing maintenance.',
+                content: `...` // Content for data center
+            },
+            'hardware': {
+                title: 'Hardware Supply & Installation',
+                icon: 'desktop',
+                subtitle: 'Quality IT infrastructure',
+                description: 'Procurement and installation of high-quality IT hardware.',
+                content: `...` // Content for hardware
+            },
+            'lan-infrastructure': {
+                title: 'LAN Infrastructure',
+                icon: 'network-wired',
+                subtitle: 'Robust network solutions',
+                description: 'Design and implementation of local area network infrastructure.',
+                content: `...` // Content for LAN infrastructure
+            }
+        };
+
+        // Load service content based on URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceId = urlParams.get('service');
+            
+            if (serviceId && services[serviceId]) {
+                const service = services[serviceId];
+                
+                // Update page title
+                document.title = `${service.title} - ThoughtWire Global System LTD`;
+                
+                // Update hero section
+                document.getElementById('service-title').textContent = service.title;
+                document.getElementById('service-subtitle').textContent = service.subtitle;
+                
+                // Update breadcrumb
+                document.getElementById('breadcrumb-service').textContent = service.title;
+                
+                // Update service icon
+                document.getElementById('service-icon').className = `fas fa-${service.icon}`;
+                
+                // Update service heading and description
+                document.getElementById('service-heading').textContent = service.title;
+                document.getElementById('service-description').textContent = service.description;
+                
+                // Load service content
+                document.getElementById('service-details').innerHTML = service.content;
+            } else {
+                // Redirect to services page if service not found
+                window.location.href = 'index.html#service';
+            }
+        });
+    </script>
+</body>
+</html>
