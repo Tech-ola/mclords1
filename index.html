@@ -111,12 +111,25 @@
       margin-top: 76px;
     }
     .hero-slide {
-      min-height: 560px;
-      background: linear-gradient(107deg, #0b1e33 0%, #1a3450 100%);
+      min-height: 600px;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    /* Dark overlay for better text readability */
+    .hero-slide::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(4, 47, 90, 0.75) 0%, rgba(11, 30, 51, 0.5) 100%);
+      z-index: 1;
     }
     .hero-slide::after {
       content: "";
@@ -125,8 +138,9 @@
       bottom: 0;
       width: 60%;
       height: 100%;
-      background: radial-gradient(circle at 100% 30%, rgba(58,85,143,0.25) 0%, transparent 70%);
+      background: radial-gradient(circle at 100% 30%, rgba(58,85,143,0.15) 0%, transparent 70%);
       pointer-events: none;
+      z-index: 1;
     }
     .hero-content {
       position: relative;
@@ -148,7 +162,7 @@
       font-size: clamp(2.4rem, 8vw, 4.5rem);
       line-height: 1.15;
       color: white;
-      text-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      text-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     .btn-primary-custom {
       background: var(--primary);
@@ -349,11 +363,12 @@
   </div>
 </nav>
 
-<!-- HERO Carousel with Swiper -->
+<!-- HERO Carousel with Swiper (with background images) -->
 <section id="home">
   <div class="swiper hero-carousel">
     <div class="swiper-wrapper">
-      <div class="swiper-slide hero-slide">
+      <!-- Slide 1 - with background image 1.jpg -->
+      <div class="swiper-slide hero-slide" style="background-image: url('img/1.jpg');">
         <div class="container hero-content">
           <div class="row">
             <div class="col-lg-10 mx-auto text-center text-lg-start" data-aos="fade-up" data-aos-duration="800">
@@ -365,7 +380,9 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide hero-slide" style="background: linear-gradient(145deg, #0e223a 0%, #1e3b5a 100%);">
+      
+      <!-- Slide 2 - with background image 2.jpg -->
+      <div class="swiper-slide hero-slide" style="background-image: url('img/2.jpg');">
         <div class="container hero-content">
           <div class="row">
             <div class="col-lg-10 mx-auto text-center text-lg-start" data-aos="fade-up">
@@ -373,6 +390,20 @@
               <h1 class="hero-title">High‑Speed Campus WiFi & IT Infrastructure</h1>
               <p class="text-white-50 fs-5 my-4">Unlimited download · 24/7 support · future-ready solutions.</p>
               <a href="#service" class="btn-primary-custom text-decoration-none"><i class="fas fa-network-wired me-2"></i>Our Solutions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide 3 - with background image 3.jpg -->
+      <div class="swiper-slide hero-slide" style="background-image: url('img/3.jpg');">
+        <div class="container hero-content">
+          <div class="row">
+            <div class="col-lg-10 mx-auto text-center text-lg-start" data-aos="fade-up">
+              <span class="hero-badge"><i class="fas fa-globe-americas me-2"></i>Global Expertise</span>
+              <h1 class="hero-title">USA Equipment · Free Installation · Local Support</h1>
+              <p class="text-white-50 fs-5 my-4">Bringing world-class infrastructure to your institution.</p>
+              <a href="#service" class="btn-primary-custom text-decoration-none"><i class="fas fa-arrow-right me-2"></i>Discover More</a>
             </div>
           </div>
         </div>
@@ -612,8 +643,11 @@
         }
       }
     });
+    // Keep home active at top
+    if(window.scrollY < 100) {
+      document.querySelector('.nav-link[href="#home"]')?.classList.add('active');
+    }
   });
 </script>
-<!-- fallback for missing images -->
 </body>
 </html>
