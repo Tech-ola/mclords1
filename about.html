@@ -1,290 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>ThoughtWire Global System LTD</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>About • ThoughtWire Global Systems</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Edu+TAS+Beginner:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+  <style>
+    :root {
+      --primary: #3a558f;
+      --primary-dark: #2a3f6e;
+      --secondary: #042f5a;
+      --accent: #ffb347;
+      --light-bg: #f9fafc;
+      --text-dark: #1e2b3c;
+    }
 
-    <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: white;
+      overflow-x: hidden;
+    }
 
-    <!-- Libraries Stylesheet -->
-    <link rel="stylesheet" href="lib/animate/animate.min.css" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    h1, h2, h3, h4, .nav-brand, .btn {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+    }
 
-    <!-- Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    /* Navbar (modern glass) */
+    .navbar-custom {
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      padding: 0.8rem 0;
+    }
+    .navbar-brand img {
+      height: 52px;
+      width: auto;
+      filter: drop-shadow(0 4px 6px rgba(58,85,143,0.1));
+    }
+    .navbar-nav .nav-link {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--secondary) !important;
+      margin: 0 6px;
+      padding: 8px 16px !important;
+      border-radius: 40px;
+      transition: all 0.2s;
+    }
+    .navbar-nav .nav-link i {
+      margin-right: 6px;
+      color: var(--primary);
+    }
+    .navbar-nav .nav-link:hover {
+      background: rgba(58,85,143,0.06);
+      color: var(--primary) !important;
+    }
+    .navbar-nav .nav-link.active {
+      background: var(--primary);
+      color: white !important;
+    }
+    .navbar-nav .nav-link.active i {
+      color: white;
+    }
+    .navbar-toggler {
+      border: none;
+      font-size: 1.6rem;
+      color: var(--primary);
+    }
 
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    /* Hero about */
+    .about-hero {
+      background: linear-gradient(107deg, #0b1e33 0%, #1e3a5a 100%);
+      padding: 6rem 0 5rem;
+      margin-top: 76px;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-hero::after {
+      content: "";
+      position: absolute;
+      right: -10%;
+      bottom: -20%;
+      width: 70%;
+      height: 140%;
+      background: radial-gradient(circle, rgba(58,85,143,0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    .section-badge {
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
 
-    <style>
-        .hero-sections {
-          background: url('img/2.jpg') center/cover no-repeat;
-          padding: 100px 0;
-          color: #fff;
-          text-align: center;
-        }
-        .section-title {
-          font-size: 2rem;
-          font-weight: 700;
-          margin-bottom: 20px;
-        }
-        .section-content {
-          font-size: 1.1rem;
-          line-height: 1.7;
-        }
-        .navbar {
-                background: #fff;
-                padding: 10px 20px;
-                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            }
-    
-            .navbar-brand img {
-                height: 60px;
-                object-fit: contain;
-            }
-    
-            .navbar-nav .nav-link {
-                font-size: 16px;
-                font-weight: 600;
-                margin-left: 15px;
-                color: #042f5a !important;
-            }
-      </style>
-    </head>
-    <body>
-    
-      <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-            <div class="container d-flex justify-content-between align-items-center">
-            
-            <a class="" href="https://tech-ola.github.io/McLords">
-                <img src="img/logo.png" alt="Logo" class="img-fluid" >
-            </a>
-            
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="fa fa-bars"></span>
-            </button>
-        
-            <!-- Navbar Links -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto">
-                <a href="https://tech-ola.github.io/McLords" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="/#service" class="nav-item nav-link">Service</a>
-                <a href="#partners" class="nav-item nav-link">Partners</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-            </div>
-            </div>
-        </nav>
-        <!-- Navbar End -->
-    <!-- Hero Section -->
-    <section class="hero-sections">
-        <div class="container">
-          <h1 class="display-4 fw-bold" style="color: white;">About Us</h1>
-          <p class="lead">Get to know more about who we are and what drives us.</p>
+    /* Cards & interactive */
+    .glass-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(8px);
+      border-radius: 32px;
+      padding: 2.2rem 2rem;
+      box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255,255,255,0.5);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    .glass-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 40px -15px var(--primary);
+      background: white;
+    }
+
+    .icon-lg {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.1;
+    }
+
+    .btn-primary-custom {
+      background: var(--primary);
+      border: none;
+      padding: 12px 32px;
+      border-radius: 60px;
+      font-weight: 600;
+      color: white;
+      box-shadow: 0 12px 20px -10px rgba(58,85,143,0.4);
+      transition: all 0.25s;
+    }
+    .btn-primary-custom:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 25px -8px var(--primary);
+      color: white;
+    }
+
+    /* footer */
+    .footer-new {
+      background: #0b1727;
+      color: #ccd9e6;
+    }
+    .footer-new a {
+      color: #ccd9e6;
+      text-decoration: none;
+    }
+    .footer-new a:hover {
+      color: white;
+    }
+    .footer-logo {
+      filter: brightness(0) invert(1);
+      max-width: 200px;
+    }
+    .back2top {
+      background: var(--primary);
+      width: 50px;
+      height: 50px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      box-shadow: 0 10px 20px rgba(58,85,143,0.4);
+    }
+
+    @media (max-width: 768px) {
+      .navbar-collapse {
+        background: rgba(255,255,255,0.98);
+        padding: 1.5rem;
+        border-radius: 24px;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo.png" alt="ThoughtWire Logo" onerror="this.src='https://placehold.co/180x52/3a558f/white?text=ThoughtWire'; this.style.background='#3a558f'; this.style.padding='8px'; this.style.borderRadius='12px'">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html"><i class="fas fa-building"></i> About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#service"><i class="fas fa-cogs"></i> Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#partners"><i class="fas fa-handshake"></i> Partners</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero About -->
+<section class="about-hero">
+  <div class="container position-relative" style="z-index: 5;">
+    <div class="row align-items-center">
+      <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+        <span class="badge bg-white bg-opacity-25 text-white px-4 py-2 rounded-pill mb-3"><i class="fas fa-globe me-2"></i>Est. 2005 • Global footprint</span>
+        <h1 class="display-3 fw-bold text-white mb-4">Engineering the future, <br> <span style="color: #aec3ff;">powered by integrity.</span></h1>
+        <p class="fs-5 text-white-50 mb-4">ThoughtWire Global System LTD — innovation, infrastructure, and connectivity.</p>
+        <a href="#mission" class="btn btn-light rounded-pill px-4 py-3 fw-semibold me-2"><i class="fas fa-arrow-down me-2"></i>Our purpose</a>
+        <a href="contact.html" class="btn-primary-custom text-decoration-none"><i class="fas fa-comment"></i> Get in touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Company Overview + high quality features -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <span class="section-badge"><i class="far fa-building"></i> WHO WE ARE</span>
+        <h2 class="display-5 fw-bold mt-2 mb-4">Providing highest quality features, globally.</h2>
+        <p class="lead">ThoughtWire Global System LTD partners with institutions to deliver broadband internet that covers every corner of campus — 24/7, unlimited, and 99.99% uptime.</p>
+        <p>Our USA‑sourced equipment incorporates the latest compression & encryption. We bring, install, manage, and maintain at no cost — you only pay a token for bandwidth. Easy, fast, and built for scale.</p>
+        <div class="d-flex gap-3 mt-4">
+          <div><span class="stat-number">25+</span> <br><span class="text-secondary">years experience</span></div>
+          <div class="vr"></div>
+          <div><span class="stat-number">120+</span> <br><span class="text-secondary">projects delivered</span></div>
         </div>
-      </section>
-    
-      <!-- Company Overview -->
-      <section class="py-5">
-        <div class="container">
-          <h2 class="section-title text-center">Providing the highest quality features</h2>
-          <p class="section-content text-center">
-            ThoughtWire Global System LTD is poised to collaborate with your institution to provide broadband internet service and make it available at every point, every space on campus 24 hours, 7 days. The service offers unlimited download at fast speed with 99.99% uptime.
-    
-            Our equipment, made available from our head office in the USA, is packed with the latest compression and encryption technology that ensures fast speed and reliability.
-            We are bringing all the equipment from the USA free, we will install, manage and maintain the equipment free. Users only pay a token for the bandwidth. Easy, fast and convenient.
-          </p>
-        </div>
-      </section>
-    
-      <!-- Mission & Vision -->
-      <section class="py-5 bg-light">
-        <div class="container">
-          <div class="row g-4">
-            <!-- Mission -->
-            <div class="col-md-6">
-              <div class="card h-100 shadow-sm border-0">
-                <div class="card-body text-center">
-                  <i class="fas fa-bullseye fa-3x mb-3 text-primary"></i>
-                  <h3 class="card-title">Our Mission</h3>
-                  <p class="card-text">
-                    To provide innovative, reliable, and sustainable solutions that empower our clients 
-                    and improve lives while upholding the highest standards of integrity and professionalism.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Vision -->
-            <div class="col-md-6">
-              <div class="card h-100 shadow-sm border-0">
-                <div class="card-body text-center">
-                  <i class="fas fa-eye fa-3x mb-3 text-success"></i>
-                  <h3 class="card-title">Our Vision</h3>
-                  <p class="card-text">
-                    To be a leading force in our industry, recognized globally for excellence, innovation, 
-                    and a positive impact on communities and the environment.
-                  </p>
-                </div>
-              </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="glass-card p-4 p-xl-5">
+          <i class="fas fa-quote-right fa-2x opacity-25 mb-3"></i>
+          <p class="fs-5 fst-italic">“Our equipment is free, installation is free — we only ask for a token on bandwidth. That's how confident we are in our value.”</p>
+          <div class="d-flex align-items-center mt-4">
+            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 56px; height: 56px;"><i class="fas fa-microchip fa-2x"></i></div>
+            <div class="ms-3">
+              <h5 class="mb-0">USA technology · Local excellence</h5>
+              <small>Head office: Snellville, GA</small>
             </div>
           </div>
         </div>
-      </section>    
+      </div>
+    </div>
+  </div>
+</section>
 
-
-         
-
-
-        <!-- Footer Start -->
-        <div class="container-fluid footer bg-dark py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-md-8 col-lg-8 col-xl-6">
-                        <div class="footer-item d-flex flex-column">
-                            <div class="footer-item">
-                                <!-- <h3 class="text-white mb-4"><i class="fas fa-cogs text-primary me-3"></i>ThoughtWire Global System LTD</h3> -->
-                                <img src="img/logo.jpg" alt="Logo" class="img-fluid mb-3" width="200px">
-                                <p class="mb-3">ThoughtWire Global System LTD is poised to collaborate with your institution to provide broadband internet service and make it available at every point, every space on campus 24 hours, 7 days. The service offers unlimited download at fast speed with 99.99% uptime.</p>
-                               
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Quick Links</h4>
-                            <a href="https://tech-ola.github.io/McLords"> Home</a>
-                            <a href="about.html"> About us</a>
-                            <a href="/#service"> Service</a>
-                            <a href="/#partners"> Partners</a>
-                            <a href="contact.html"> Contact Us</a>
-                            
-                        </div>
-                    </div>
-                    <!-- <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Electricity service</h4>
-                            <a href="#"> Air Conditioning</a>
-                            <a href="#"> Electrical Panels</a>
-                            <a href="#"> Security System</a>
-                            <a href="#"> Indoor Lighting</a>
-                            <a href="#"> Electrical Services</a>
-                        </div>
-                    </div> -->
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Contact Info</h4>
-                            <a href="mailto:infor@thoughtwire.net"><i class="fas fa-envelope text-primary"></i> infor@thoughtwire.net</a>
-
-                            <a href="tel:+2348165994317"><i class="fas fa-phone text-primary me-2"></i> 0816 599 4317</a>
-                            <a href="tel:+2348188903416" class="mb-3"><i class="fas fa-print text-primary me-2"></i> 0818 890 3416</a>
-                            <!-- <a href="#"><i class="fa fa-map-marker-alt text-primary me-2"></i> USA: 3030 Rusticwood Drive, Snellville, GA 30078</a>
-                            <a href="#"><i class="fa fa-map-marker-alt text-primary me-2"></i> LAGOS STATE: 27, Acme Road, Agidingbi, Ikeja, Lagos</a>
-                            <a href="#"><i class="fa fa-map-marker-alt text-primary me-2"></i> KWARA STATE: Jam Fortune House, 10 Police Road, Adjacent Radio Kwara, GRA, Ilorin</a> -->
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Mission & Vision (interactive) -->
+<section id="mission" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-down">
+      <span class="section-badge"><i class="fas fa-bullseye"></i> OUR DRIVE</span>
+      <h2 class="display-4 fw-bold">Mission & Vision</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6" data-aos="flip-left" data-aos-delay="0">
+        <div class="glass-card text-center h-100 border-0" style="background: white;">
+          <div class="icon-lg"><i class="fas fa-bullseye"></i></div>
+          <h3>Our Mission</h3>
+          <p class="px-2">To provide innovative, reliable, and sustainable solutions that empower our clients and improve lives — while upholding the highest standards of integrity and professionalism.</p>
+          <div class="mt-4 pt-2"><span class="badge bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-pill"><i class="far fa-clock me-1"></i> Every project matters</span></div>
         </div>
-        <!-- Footer End -->
-
-        
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>ThoughtWire Global System LTD</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-body">
-                        <!-- Designed By <a class="border-bottom text-white" href="https://www.linkedin.com/in/olayinka-alabi-857007198/">techwithyinka</a> -->
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="col-md-6" data-aos="flip-right" data-aos-delay="150">
+        <div class="glass-card text-center h-100 border-0" style="background: white;">
+          <div class="icon-lg"><i class="fas fa-eye"></i></div>
+          <h3>Our Vision</h3>
+          <p class="px-2">To be a leading force in engineering & technology, recognized globally for excellence, innovation, and a positive impact on communities and the environment.</p>
+          <div class="mt-4 pt-2"><span class="badge bg-success bg-opacity-10 text-success px-4 py-2 rounded-pill"><i class="fas fa-seedling me-1"></i> Sustainable growth</span></div>
         </div>
-        <!-- Copyright End -->
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- Core Values / Why we stand out -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-5" data-aos="fade-right">
+        <span class="section-badge"><i class="fas fa-gem"></i> CORE VALUES</span>
+        <h2 class="display-5 fw-bold">What makes us different</h2>
+        <p class="lead">We combine technology, trust, and transparency.</p>
+        <ul class="list-unstyled mt-4">
+          <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Free equipment & installation</strong> — zero capital outlay.</li>
+          <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>24/7 proactive monitoring</strong> and 99.99% SLA.</li>
+          <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>End-to-end project execution</strong> (civil, electrical, IT).</li>
+          <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Local presence with global standards.</strong></li>
+        </ul>
+        <a href="index.html#service" class="btn-primary-custom text-decoration-none d-inline-block mt-3"><i class="fas fa-arrow-right"></i> Explore services</a>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="row g-3">
+          <div class="col-6"><div class="bg-white p-4 rounded-4 shadow-sm text-center"><i class="fas fa-users fa-2x text-primary mb-2"></i><h4>Expert team</h4><p class="small">25+ years combined</p></div></div>
+          <div class="col-6"><div class="bg-white p-4 rounded-4 shadow-sm text-center"><i class="fas fa-wifi fa-2x text-primary mb-2"></i><h4>Campus WiFi</h4><p class="small">Unlimited · secure</p></div></div>
+          <div class="col-6"><div class="bg-white p-4 rounded-4 shadow-sm text-center"><i class="fas fa-solar-panel fa-2x text-primary mb-2"></i><h4>Green energy</h4><p class="small">Solar solutions</p></div></div>
+          <div class="col-6"><div class="bg-white p-4 rounded-4 shadow-sm text-center"><i class="fas fa-headset fa-2x text-primary mb-2"></i><h4>24/7 support</h4><p class="small">Always on</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top" style="background-color: #042f5a;"><i class="fa fa-arrow-up"></i></a>   
+<!-- Footer (consistent with main) -->
+<footer class="footer-new pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <img src="img/logo.png" alt="logo" class="footer-logo mb-3" onerror="this.src='https://placehold.co/200x55/ffffff/3a558f?text=ThoughtWire';">
+        <p class="opacity-75">ThoughtWire Global System LTD provides broadband internet 24/7, unlimited downloads & 99.99% uptime. Engineering, IT, and infrastructure solutions.</p>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <h5 class="text-white mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="index.html"><i class="fas fa-chevron-right me-2 small"></i>Home</a></li>
+          <li class="mb-2"><a href="about.html"><i class="fas fa-chevron-right me-2 small"></i>About</a></li>
+          <li class="mb-2"><a href="index.html#service"><i class="fas fa-chevron-right me-2 small"></i>Services</a></li>
+          <li class="mb-2"><a href="index.html#partners"><i class="fas fa-chevron-right me-2 small"></i>Partners</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right me-2 small"></i>Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <h5 class="text-white mb-3">Contact Info</h5>
+        <p><i class="fas fa-envelope me-2" style="color:var(--primary);"></i> infor@thoughtwire.net</p>
+        <p><i class="fas fa-phone-alt me-2" style="color:var(--primary);"></i> 0816 599 4317</p>
+        <p><i class="fas fa-print me-2" style="color:var(--primary);"></i> 0818 890 3416</p>
+        <p class="small opacity-50 mt-4">USA · Lagos · Ilorin</p>
+      </div>
+    </div>
+    <hr class="opacity-25 mt-4">
+    <div class="row">
+      <div class="col text-center">
+        <span>© ThoughtWire Global System LTD. All rights reserved.</span>
+      </div>
+    </div>
+  </div>
+</footer>
 
+<!-- Back to top -->
+<a href="#" class="back2top position-fixed bottom-0 end-0 m-4"><i class="fas fa-arrow-up"></i></a>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-    // Initialize the Services Swiper
-    const serviceSwiper = new Swiper('.mySwiper', {
-        loop: true,
-        slidesPerView: 3, // Adjust based on screen size
-        spaceBetween: 20,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-                320: { slidesPerView: 1, spaceBetween: 10 },
-                768: { slidesPerView: 2, spaceBetween: 20 },
-                1024: { slidesPerView: 3, spaceBetween: 30 },
-            },
-    });
-
-    // Initialize the Partners Swiper
-    const partnersSwiper = new Swiper('.mySwiperBlog', {
-        loop: true,
-        autoplay: {
-            delay: 1500, // Adjust speed as needed
-            disableOnInteraction: false, 
-        },
-        slidesPerView: 3, // Adjust based on screen size
-        spaceBetween: 20,
-        pagination: {
-            el: '.swiper-pagination-blog',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next-blog',
-            prevEl: '.swiper-button-prev-blog',
-        },
-        breakpoints: {
-                320: { slidesPerView: 2, spaceBetween: 10 },
-                768: { slidesPerView: 2, spaceBetween: 20 },
-                1024: { slidesPerView: 3, spaceBetween: 30 },
-            },
-    });
-});
-
+  AOS.init({ duration: 800, once: true });
+  
+  // Active nav sync (if on about page)
+  document.querySelectorAll('.nav-link').forEach(link => {
+    if(link.getAttribute('href') === 'about.html' || link.href.includes('about.html')) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
 </script>
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-        
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
-
+<!-- no extra swiper needed on about, but keep clean -->
+</body>
 </html>
