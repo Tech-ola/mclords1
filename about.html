@@ -31,11 +31,16 @@
       color: var(--text-dark);
       background: white;
       overflow-x: hidden;
+      padding-top: 90px; /* Add padding to prevent content from hiding behind fixed navbar */
     }
 
     h1, h2, h3, h4, .nav-brand, .btn {
       font-family: 'Jost', sans-serif;
       font-weight: 600;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     /* Navbar (modern glass) */
@@ -45,12 +50,39 @@
       -webkit-backdrop-filter: blur(12px);
       box-shadow: 0 4px 20px rgba(0,0,0,0.03);
       padding: 0.8rem 0;
+      transition: all 0.3s ease;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
     }
+    
+    /* Fixed navbar state when scrolled */
+    .navbar-custom.navbar-scrolled {
+      background: rgba(255,255,255,0.98);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding: 0.5rem 0;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+    }
+    
     .navbar-brand img {
       height: 52px;
       width: auto;
       filter: drop-shadow(0 4px 6px rgba(58,85,143,0.1));
+      transition: all 0.3s ease;
     }
+    
+    /* Smaller logo when scrolled */
+    .navbar-scrolled .navbar-brand img {
+      height: 45px;
+    }
+    
+    .navbar-brand:hover img {
+      transform: scale(1.02);
+    }
+    
     .navbar-nav .nav-link {
       font-weight: 600;
       font-size: 1.05rem;
@@ -60,35 +92,57 @@
       border-radius: 40px;
       transition: all 0.2s;
     }
+    
     .navbar-nav .nav-link i {
       margin-right: 6px;
       color: var(--primary);
     }
+    
     .navbar-nav .nav-link:hover {
       background: rgba(58,85,143,0.06);
       color: var(--primary) !important;
     }
+    
     .navbar-nav .nav-link.active {
       background: var(--primary);
       color: white !important;
     }
+    
     .navbar-nav .nav-link.active i {
       color: white;
     }
+    
+    /* Fix for mobile navbar toggler */
     .navbar-toggler {
       border: none;
       font-size: 1.6rem;
       color: var(--primary);
+      transition: all 0.3s ease;
+      padding: 0.5rem;
+      margin-right: 0;
+      position: relative;
+      right: 0;
+    }
+    
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+    
+    /* Ensure proper container width on mobile */
+    .navbar .container {
+      position: relative;
+      padding-left: 15px;
+      padding-right: 15px;
     }
 
     /* Hero about */
     .about-hero {
       background: linear-gradient(107deg, #0b1e33 0%, #1e3a5a 100%);
       padding: 6rem 0 5rem;
-      margin-top: 76px;
       position: relative;
       overflow: hidden;
     }
+    
     .about-hero::after {
       content: "";
       position: absolute;
@@ -119,6 +173,7 @@
       transition: all 0.3s ease;
       height: 100%;
     }
+    
     .glass-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 30px 40px -15px var(--primary);
@@ -147,7 +202,10 @@
       color: white;
       box-shadow: 0 12px 20px -10px rgba(58,85,143,0.4);
       transition: all 0.25s;
+      display: inline-block;
+      text-decoration: none;
     }
+    
     .btn-primary-custom:hover {
       background: var(--primary-dark);
       transform: translateY(-3px);
@@ -160,17 +218,23 @@
       background: #0b1727;
       color: #ccd9e6;
     }
+    
     .footer-new a {
       color: #ccd9e6;
       text-decoration: none;
+      transition: 0.2s;
     }
+    
     .footer-new a:hover {
       color: white;
     }
+    
     .footer-logo {
       filter: brightness(0) invert(1);
       max-width: 200px;
     }
+    
+    /* back to top */
     .back2top {
       background: var(--primary);
       width: 50px;
@@ -181,31 +245,109 @@
       justify-content: center;
       color: white;
       box-shadow: 0 10px 20px rgba(58,85,143,0.4);
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1040;
+    }
+    
+    .back2top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back2top:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(58,85,143,0.5);
+      color: white;
     }
 
-    @media (max-width: 768px) {
+    /* Responsive fixes - Mobile Menu */
+    @media (max-width: 991px) {
+      /* Fix for navbar container padding */
+      .navbar > .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
       .navbar-collapse {
+        position: fixed;
+        top: 75px;
+        left: 0;
+        right: 0;
         background: rgba(255,255,255,0.98);
         padding: 1.5rem;
-        border-radius: 24px;
-        margin-top: 10px;
+        border-radius: 0 0 24px 24px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
+        z-index: 1029;
+        border-top: 1px solid rgba(0,0,0,0.05);
+        max-height: calc(100vh - 75px);
+        overflow-y: auto;
+        width: 100%;
       }
+      
+      /* Adjust top position when navbar is scrolled */
+      .navbar-custom.navbar-scrolled .navbar-collapse {
+        top: 65px;
+        max-height: calc(100vh - 65px);
+      }
+      
+      /* Ensure the navbar container has proper z-index stacking */
+      .navbar {
+        z-index: 1030;
+      }
+      
+      /* Add smooth transition for the collapse */
+      .navbar-collapse.collapsing,
+      .navbar-collapse.show {
+        transition: all 0.3s ease;
+      }
+      
+      body {
+        padding-top: 75px;
+      }
+      
+      /* Prevent horizontal scroll on mobile */
+      body, html {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+    }
+    
+    /* Additional mobile optimizations */
+    @media (max-width: 768px) {
+      .about-hero {
+        padding: 4rem 0 3rem;
+      }
+      
+      .navbar-brand img {
+        height: 42px;
+      }
+    }
+
+    /* animation on scroll */
+    [data-aos] {
+      transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
   </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">
       <img src="img/logo.png" alt="ThoughtWire Logo" onerror="this.src='https://placehold.co/180x52/3a558f/white?text=ThoughtWire'; this.style.background='#3a558f'; this.style.padding='8px'; this.style.borderRadius='12px'">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarMain">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
         <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
         <li class="nav-item"><a class="nav-link active" href="about.html"><i class="fas fa-building"></i> About</a></li>
         <li class="nav-item"><a class="nav-link" href="index.html#service"><i class="fas fa-cogs"></i> Services</a></li>
@@ -225,7 +367,7 @@
         <h1 class="display-3 fw-bold text-white mb-4">Engineering the future, <br> <span style="color: #aec3ff;">powered by integrity.</span></h1>
         <p class="fs-5 text-white-50 mb-4">ThoughtWire Global System LTD — innovation, infrastructure, and connectivity.</p>
         <a href="#mission" class="btn btn-light rounded-pill px-4 py-3 fw-semibold me-2"><i class="fas fa-arrow-down me-2"></i>Our purpose</a>
-        <a href="contact.html" class="btn-primary-custom text-decoration-none"><i class="fas fa-comment"></i> Get in touch</a>
+        <a href="contact.html" class="btn-primary-custom"><i class="fas fa-comment me-2"></i>Get in touch</a>
       </div>
     </div>
   </div>
@@ -249,7 +391,7 @@
       <div class="col-lg-6" data-aos="fade-left">
         <div class="glass-card p-4 p-xl-5">
           <i class="fas fa-quote-right fa-2x opacity-25 mb-3"></i>
-          <p class="fs-5 fst-italic">“Our equipment is free, installation is free — we only ask for a token on bandwidth. That's how confident we are in our value.”</p>
+          <p class="fs-5 fst-italic">"Our equipment is free, installation is free — we only ask for a token on bandwidth. That's how confident we are in our value."</p>
           <div class="d-flex align-items-center mt-4">
             <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 56px; height: 56px;"><i class="fas fa-microchip fa-2x"></i></div>
             <div class="ms-3">
@@ -305,7 +447,7 @@
           <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>End-to-end project execution</strong> (civil, electrical, IT).</li>
           <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Local presence with global standards.</strong></li>
         </ul>
-        <a href="index.html#service" class="btn-primary-custom text-decoration-none d-inline-block mt-3"><i class="fas fa-arrow-right"></i> Explore services</a>
+        <a href="index.html#service" class="btn-primary-custom d-inline-block mt-3"><i class="fas fa-arrow-right me-2"></i>Explore services</a>
       </div>
       <div class="col-lg-7" data-aos="fade-left">
         <div class="row g-3">
@@ -355,7 +497,7 @@
 </footer>
 
 <!-- Back to top -->
-<a href="#" class="back2top position-fixed bottom-0 end-0 m-4"><i class="fas fa-arrow-up"></i></a>
+<a href="#" class="back2top"><i class="fas fa-arrow-up"></i></a>
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
@@ -363,15 +505,63 @@
 <script>
   AOS.init({ duration: 800, once: true });
   
-  // Active nav sync (if on about page)
-  document.querySelectorAll('.nav-link').forEach(link => {
-    if(link.getAttribute('href') === 'about.html' || link.href.includes('about.html')) {
-      link.classList.add('active');
+  // Navbar scroll effect
+  const navbar = document.querySelector('.navbar-custom');
+  const backToTop = document.querySelector('.back2top');
+  
+  window.addEventListener('scroll', function() {
+    // Navbar scroll effect
+    if (window.scrollY > 50) {
+      navbar.classList.add('navbar-scrolled');
     } else {
-      link.classList.remove('active');
+      navbar.classList.remove('navbar-scrolled');
+    }
+    
+    // Back to top button visibility
+    if (window.scrollY > 300) {
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
     }
   });
+  
+  // Smooth scroll for back to top
+  backToTop.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  
+  // Close mobile menu when link is clicked
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navbarCollapse.classList.contains('show')) {
+        bsCollapse.hide();
+      }
+    });
+  });
+
+  // Smooth scroll for "Our purpose" button
+  const purposeButton = document.querySelector('a[href="#mission"]');
+  if (purposeButton) {
+    purposeButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector('#mission');
+      const offset = 80; // Account for fixed navbar
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    });
+  }
 </script>
-<!-- no extra swiper needed on about, but keep clean -->
 </body>
 </html>
